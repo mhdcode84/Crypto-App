@@ -1,0 +1,24 @@
+th{
+   text-align: left;
+   padding-bottom: 8px;
+   font-size: 1.2rem;
+   padding: 10px 0;
+}
+td{
+    padding-top: 8px;
+}
+tbody tr{
+    border-bottom: 1px solid #22262e;
+    height: 80px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.container{
+ min-height: 1000px;
+ max-width: 1000px;
+   margin: 0 auto;
+margin-top: 50px;
+margin-bottom: 80px;
+overflow-y: hidden;
+   
+}

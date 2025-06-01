@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import TableCoin from '../modules/TableCoin'
 import { getCoinList } from '../../services/CryptoApi';
-
 function HomePage() {
   const [coins, setcoins] = useState([])
   const [Isloading,Setisloading] = useState(true)

@@ -4,7 +4,7 @@ import HomePage from './components/template/HomePage';
 function App() {
   return (
     <>
-<div>
+<div >
   <HomePage/>
 </div>
       
