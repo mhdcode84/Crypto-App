@@ -4,7 +4,7 @@ import { RingLoader } from "react-spinners";
 import '../modules/global.css'
 function TableCoin({ coins, Isloading }) {
     return (
-        <div className="container">
+        <div>
             {Isloading ? <div className="flex justify-center items-center h-screen"><RingLoader  color="#0004ff" /> </div>:
                 (
                     <table className="border-collapse mb-[20px]  w-[100%]">
