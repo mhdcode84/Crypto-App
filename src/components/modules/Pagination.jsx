@@ -6,24 +6,24 @@ function Pagination({setpage,page}) {
         setpage((page)=>page-1)
     }
     function nexthandler(){
-        if (page>=10) return;
+        if (page>=9) return;
         setpage((page)=>page+1)
     }
   return (
-<div>
-    <button onClick={previoushandler}>previous</button>
+<div className='flex w-[400px] justify-between items-center mb-[100px] m-auto'>
+    <button className='w-[80px] p-[5px_10px] border-none text-[#fff] bg-[#3874ff] rounded-[5px] text-[1rem] cursor-pointer' onClick={previoushandler}>previous</button>
     <p className={page === 1 ? "text-red-500" : "text-inherit"}>1</p>
     <p className={page === 2 ? "text-red-500" : "text-inherit"}>2</p>
     {page>2 && page<9 && (
         <>
         <span>...</span>
-        <p>{page}</p>
+        <p className='text-red-500'>{page}</p>
         </>
     )}
     <p>...</p>
-    <p>9</p>
-    <p>10</p>
-    <button onClick={nexthandler}>next</button>
+    <p className={page === 8 ? "text-red-500" : "text-inherit"}>8</p>
+    <p className={page === 9 ? "text-red-500" : "text-inherit"}>9</p>
+    <button className='w-[80px] p-[5px_10px] border-none text-[#fff] bg-[#3874ff] rounded-[5px] text-[1rem] cursor-pointer' onClick={nexthandler}>next</button>
 </div>
   )
 }

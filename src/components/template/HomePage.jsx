@@ -18,8 +18,8 @@ function HomePage() {
   }, [page])
   return (
     <div className='container'>
-      <Pagination page={page} setpage={setpage}  />
       <TableCoin coins={coins} Isloading={Isloading} />
+      <Pagination page={page} setpage={setpage}  />
     </div>
   )
 }
