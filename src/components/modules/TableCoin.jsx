@@ -4,12 +4,12 @@ import { RingLoader } from "react-spinners";
 import '../modules/global.css'
 function TableCoin({ coins, Isloading }) {
     return (
-        <div>
-            {Isloading ? <div className="flex justify-center items-center h-screen"><RingLoader  color="#0004ff" /> </div>:
+        <div className="h-[1700px]" >
+            {Isloading ? <div className="flex justify-center items-center h-[550px] "><RingLoader color="#0004ff" size={60} /> </div> :
                 (
-                    <table className="border-collapse mb-[20px]  w-[100%]">
+                    <table className="border-collapse mb-[20px]  w-[100%] h-screen">
                         <thead className=" border-b-2 border-b-solid border-b-[#fff] mt-52">
-                            <tr > 
+                            <tr >
                                 <th>Coin</th>
                                 <th>Name</th>
                                 <th>Price</th>
@@ -47,7 +47,7 @@ const TableRow = (
         </td>
         <td>{name}</td>
         <td>${current_price.toLocaleString()}</td>
-        <td className={price_change>0 ? "text-green-500":"text-red-500" }>{price_change.toFixed(2)}%</td>
+        <td className={price_change > 0 ? "text-green-500" : "text-red-500"}>{price_change.toFixed(2)}%</td>
         <td>{total_volume.toLocaleString()}</td>
         <td><img src={price_change > 0 ? Chartup : Chartdown} alt={name} /></td>
     </tr>

@@ -10,20 +10,20 @@ function Pagination({setpage,page}) {
         setpage((page)=>page+1)
     }
   return (
-<div className='flex w-[400px] justify-between items-center mb-[100px] m-auto'>
-    <button className='w-[80px] p-[5px_10px] border-none text-[#fff] bg-[#3874ff] rounded-[5px] text-[1rem] cursor-pointer' onClick={previoushandler}>previous</button>
-    <p className={page === 1 ? "text-red-500" : "text-inherit"}>1</p>
-    <p className={page === 2 ? "text-red-500" : "text-inherit"}>2</p>
-    {page>2 && page<9 && (
+<div className='flex w-[400px] justify-between items-center mb-[20px] m-auto mt-[100PX] '>
+    <button className={`w-[80px] p-[5px_10px] border-none text-[#fff] bg-[#3874ff] rounded-[5px] text-[1rem] cursor-pointer ${page === 1 ? "opacity-[0.3]" : null}`} onClick={previoushandler}>previous</button>
+    <p className={`border-1 border-[#3874ff] border-solid w-[25px] rounded-[5px] text-center cursor-pointer  ${page == 1 ? "bg-[#3874ff]  text-[#fff] " : "text-inherit"}`}>1</p>
+    <p className={`border-1 border-[#3874ff] border-solid w-[25px] rounded-[5px] text-center cursor-pointer ${page == 2 ? "bg-[#3874ff]  text-[#fff] " : "text-inherit"}`}>2</p>
+    {page>2 && page<8 && (
         <>
         <span>...</span>
-        <p className='text-red-500'>{page}</p>
+        <p className='border-1 border-[#3874ff] border-solid w-[25px] rounded-[5px] text-center cursor-pointer bg-[#3874ff]  text-[#fff]'>{page}</p>
         </>
     )}
     <p>...</p>
-    <p className={page === 8 ? "text-red-500" : "text-inherit"}>8</p>
-    <p className={page === 9 ? "text-red-500" : "text-inherit"}>9</p>
-    <button className='w-[80px] p-[5px_10px] border-none text-[#fff] bg-[#3874ff] rounded-[5px] text-[1rem] cursor-pointer' onClick={nexthandler}>next</button>
+    <p className={`border-1 border-[#3874ff] border-solid w-[25px] rounded-[5px] text-center cursor-pointer ${page == 8 ? "bg-[#3874ff]  text-[#fff] " : "text-inherit"}`}>8</p>
+    <p className={`border-1 border-[#3874ff] border-solid w-[25px] rounded-[5px] text-center cursor-pointer ${page == 9 ? "bg-[#3874ff]  text-[#fff] " : "text-inherit"}`}>9</p>
+    <button className={`w-[80px] p-[5px_10px] border-none text-[#fff] bg-[#3874ff] rounded-[5px] text-[1rem] cursor-pointer ${page === 9 ? "opacity-[0.3]" : null}`} onClick={nexthandler}>next</button>
 </div>
   )
 }
